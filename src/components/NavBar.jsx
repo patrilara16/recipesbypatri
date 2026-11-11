@@ -34,10 +34,10 @@ function NavBar() {
         </Form>
         <div className="d-flex gap-2">
         <Button as={Link} to="/favorites" className="btn-nav rounded-circle" aria-label="Favorites">
-            ❤
+            💛
         </Button>
         <Button as={Link} to="/" className="btn-nav rounded-circle" aria-label="Home">
-            🏠
+            🏡
         </Button>
         </div>
       </Container>
