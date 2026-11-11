@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { Navbar, Container, Form, Button } from 'react-bootstrap'
+import { PiHouseFill, PiMagnifyingGlassBold, PiHeartFill } from "react-icons/pi";
 
 
 function NavBar() {
@@ -29,15 +30,15 @@ function NavBar() {
             onChange={(e) => setText(e.target.value)}
           />
           <Button type="submit" className="btn-search rounded-circle" aria-label="Search">
-            🔍
+            <PiMagnifyingGlassBold />
           </Button>
         </Form>
         <div className="d-flex gap-2">
         <Button as={Link} to="/favorites" className="btn-nav rounded-circle" aria-label="Favorites">
-            💛
+            <PiHeartFill />
         </Button>
         <Button as={Link} to="/" className="btn-nav rounded-circle" aria-label="Home">
-            🏡
+            <PiHouseFill />
         </Button>
         </div>
       </Container>

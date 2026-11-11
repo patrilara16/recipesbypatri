@@ -1,5 +1,5 @@
 function RecipeDetail() {
-  return <h1>RecipeDetail</h1>
+  return <h2>RecipeDetail</h2>
 }
 
 export default RecipeDetail
