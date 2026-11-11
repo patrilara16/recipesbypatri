@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { Navbar, Container, Form, Button } from 'react-bootstrap'
 
+
 function NavBar() {
   const [text, setText] = useState('')
   const navigate = useNavigate()
@@ -13,11 +14,32 @@ function NavBar() {
   }
 
   return (
-    <Navbar expand="md" className="border-bottom border-dark border-2">
+    <Navbar expand="md" className="navbar-line">
       <Container>
         <Navbar.Brand as={Link} to="/" className="fw-bold fs-1">
           Recipes by Patri 🍳
         </Navbar.Brand>
+        <Form className="d-flex gap-2" onSubmit={handleSubmit} role="search">
+          <Form.Control
+            className='search-input rounded-pill'
+            type="search"
+            placeholder="Search recipes..."
+            aria-label="Search recipes"
+            value={text}
+            onChange={(e) => setText(e.target.value)}
+          />
+          <Button type="submit" className="btn-search rounded-circle" aria-label="Search">
+            🔍
+          </Button>
+        </Form>
+        <div className="d-flex gap-2">
+        <Button as={Link} to="/favorites" className="btn-nav rounded-circle" aria-label="Favorites">
+            ❤
+        </Button>
+        <Button as={Link} to="/" className="btn-nav rounded-circle" aria-label="Home">
+            🏠
+        </Button>
+        </div>
       </Container>
     </Navbar>
   )
