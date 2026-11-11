@@ -17,7 +17,7 @@ function NavBar() {
   return (
     <Navbar expand="md" className="navbar-line">
       <Container>
-        <Navbar.Brand as={Link} to="/" className="fw-bold fs-1">
+        <Navbar.Brand className="fw-bold fs-1">
           Recipes by Patri 🍳
         </Navbar.Brand>
         <Form className="d-flex gap-2" onSubmit={handleSubmit} role="search">

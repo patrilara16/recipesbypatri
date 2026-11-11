@@ -21,7 +21,7 @@ function Home() {
         const res = await fetch(
           `https://www.themealdb.com/api/json/v1/1/search.php?s=${encodeURIComponent(q)}`
         )
-        if (!res.ok) throw new Error('Error loading Recipes')
+        if (!res.ok) throw new Error('Error al cargar las recetas')
         const data = await res.json()
 
         const list = (data.meals || []).map((m) => ({
@@ -53,7 +53,7 @@ function Home() {
       {error && <Alert variant="danger">{error}</Alert>}
 
       {!loading && !error && recipes.length === 0 && (
-        <p>No recipes found</p>
+        <p>No recipes found.</p>
       )}
 
       <Row className="g-4">

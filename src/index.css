@@ -16,20 +16,11 @@ body {
   font-style: normal;
 }
 
-h1, h2,
-.pangolin-regular {
+h1, h2, h3{
   font-family: "Pangolin";
   font-weight: 100;
   font-style: normal;
 }
-
-h3, h4, h5, h6 {
-  font-family: "Nunito", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 700;
-  font-style: normal;
-}
-
 
 .btn-nav,
 .btn-search {
@@ -49,6 +40,7 @@ h3, h4, h5, h6 {
 .btn-nav:hover,
 .btn-nav:focus-visible,
 .btn-search:hover,
+.btn-video:hover
 .btn-search:focus-visible {
   background-color: var(--dark);
   border-color: var(--dark);
@@ -68,5 +60,27 @@ h3, h4, h5, h6 {
 .search-input:focus {
   border-color: var(--secondarycolor);
   box-shadow: 0 0 0 0.2rem rgba(236, 187, 9, 0.25);
+}
+
+.recipe-detail__img {
+  width: 100%;
+  aspect-ratio: 5 / 3;
+  object-fit: cover;
+  border-radius: 4px;
+  display: block;
+}
+
+.btn-video{
+  width: 120px;
+  height: 42px;
+  padding: 5;
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  font-size: 1 rem;
+  background-color: var(--secondarycolor);
+  border: 2px solid var(--secondarycolor);
+  color: var(--dark);
 }
 
