@@ -3,6 +3,7 @@ import NavBar from './components/NavBar'
 import Home from './pages/Home'
 import RecipeDetail from './pages/RecipeDetail'
 import Favorites from './pages/Favorites'
+import { ToastContainer } from 'react-toastify'
 
 function App() {
   return (
@@ -15,8 +16,16 @@ function App() {
           <Route path="/favorites" element={<Favorites />} />
         </Routes>
       </main>
+      <ToastContainer
+        position="bottom-right"
+        autoClose={2000}
+        hideProgressBar
+        closeOnClick
+        pauseOnHover={false}
+      />
     </>
   )
 }
+
 
 export default App

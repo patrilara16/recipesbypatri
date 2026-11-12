@@ -190,6 +190,13 @@ h1, h2, h3{
   color: var(--secondarycolor);
 }
 
+.Toastify__toast {
+  border: 2px solid var(--dark);
+  border-radius: 14px;
+  color: var(--dark);
+  font-weight: 700;
+}
+
 @media (max-width: 575px) {
   .favorite-photo {
     width: 80px;

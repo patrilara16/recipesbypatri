@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { toast } from 'react-toastify'
 
 export function useFavorites() {
   const [favorites, setFavorites] = useState(() => {
@@ -14,13 +15,20 @@ export function useFavorites() {
   }, [favorites])
 
   function toggleFavorite(recipe) {
+    const alreadyFavorite = favorites.some((f) => f.id === recipe.id)
+
     setFavorites((prev) =>
-      prev.some((f) => f.id === recipe.id)
+      alreadyFavorite
         ? prev.filter((f) => f.id !== recipe.id)
         : [...prev, recipe]
     )
+
+    if (alreadyFavorite) {
+      toast.info(`${recipe.name} removed from your recipe book`)
+    } else {
+      toast.success(`${recipe.name} added to your recipe book`)
+    }
   }
 
   return { favorites, toggleFavorite }
 }
-
