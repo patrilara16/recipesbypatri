@@ -24,7 +24,7 @@ function NavBar() {
           <Form.Control
             className='search-input rounded-pill'
             type="search"
-            placeholder="Search recipes..."
+            placeholder="Search for more recipes..."
             aria-label="Search recipes"
             value={text}
             onChange={(e) => setText(e.target.value)}

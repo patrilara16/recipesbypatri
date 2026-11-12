@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import { Container, Button } from 'react-bootstrap'
-import { PiHeartFill, PiTrashBold } from 'react-icons/pi'
+import { PiTrashBold } from 'react-icons/pi'
 import { useFavorites } from '../hooks/useFavorites'
 
 function Favorites() {
@@ -24,7 +24,7 @@ function Favorites() {
               <Link to={`/recipe/${recipe.id}`} className="favorite-link">
                 <div className="favorite-text">
                   <strong>{recipe.name}</strong>
-                  <span className="favorite-info">{recipe.time}</span>
+                  <span className="favorite-info">{recipe.category}</span>
                 </div>
                 <div className="favorite-photo">
                   <img src={recipe.image} alt={recipe.name} />

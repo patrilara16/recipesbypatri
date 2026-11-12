@@ -3,6 +3,8 @@ import { useParams, Link } from 'react-router-dom'
 import { Container, Row, Col, Spinner, Alert, Button } from 'react-bootstrap'
 import { PiHeartFill, PiHeartLight} from 'react-icons/pi'
 import { useFavorites } from '../hooks/useFavorites'
+import { formatInfo } from '../utils/formatInfo'
+
 
 function RecipeDetail() {
   const { id } = useParams()
@@ -48,10 +50,10 @@ function RecipeDetail() {
       <Container className="py-4">
         <Alert variant="danger" className="text-center">
           <p>{error}</p>
-          <Button className="btn-main me-2" onClick={() => setAttempt(attempt + 1)}>
+          <Button className="btn-discover me-2" onClick={() => setAttempt(attempt + 1)}>
             Try again
           </Button>
-          <Button as={Link} to="/" className="btn-main">
+          <Button as={Link} to="/" className="btn-discover">
             Back to home
           </Button>
         </Alert>
@@ -77,7 +79,7 @@ function RecipeDetail() {
     id: meal.idMeal,
     name: meal.strMeal,
     image: meal.strMealThumb,
-    category: `${meal.strCategory} · ${meal.strArea}`,
+    category: formatInfo(meal.strCategory, meal.strArea)
   }
   const isFavorite = favorites.some((f) => f.id === recipe.id)
 

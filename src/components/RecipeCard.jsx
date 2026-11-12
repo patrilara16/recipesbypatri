@@ -14,7 +14,7 @@ function RecipeCard({ recipe, isFavorite, onToggleFavorite }) {
       <div className="recipe-card__footer">
         <div>
           <p className="recipe-card__name">{recipe.name}</p>
-          <p className="recipe-card__time">{recipe.time}</p>
+          <p className="recipe-card__category">{recipe.category}</p>
         </div>
 
         <button
