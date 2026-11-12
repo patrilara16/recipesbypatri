@@ -53,7 +53,7 @@ function Home() {
       {error && <Alert variant="danger">{error}</Alert>}
 
       {!loading && !error && recipes.length === 0 && (
-        <p>No recipes found.</p>
+        <p>Sorry, we don't know that recipe :(</p>
       )}
 
       <Row className="g-4">
