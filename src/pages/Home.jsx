@@ -95,7 +95,7 @@ function Home() {
         </Alert>
       )}
 
-      {!loading && !error && recipes.length === 0 && <p>No recipes found</p>}
+      {!loading && !error && recipes.length === 0 && <p>Sorry, we don't know that delicious recipe :(</p>}
 
       <Row className="g-4">
         {shown.map((recipe) => (
